@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Management;
 using System.Text;
-using System.Runtime.InteropServices;
 
 namespace PayPal
 {
