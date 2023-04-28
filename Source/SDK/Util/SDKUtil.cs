@@ -1,11 +1,12 @@
 using System;
-using System.Web;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Runtime.Versioning;
 using System.Text;
 using PayPal.OpenIdConnect;
 using PayPal.Exception;
 using System.Text.RegularExpressions;
+using System.Web;
 using Microsoft.Win32;
 
 namespace PayPal.Util
@@ -320,6 +321,8 @@ namespace PayPal.Util
             }
         }
 
+#if NET_4_5 || NET_4_5_1
+#else
         /// <summary>
         /// Checks if .NET 4.5 or later is detected on the system.
         /// </summary>
@@ -395,5 +398,7 @@ namespace PayPal.Util
 
             return highestNetVersion;
         }
+#endif
+
     }
 }

@@ -102,9 +102,9 @@
     <None Include="Resources\sdk-cert.p12" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SDK\PayPal.Core.SDK.NET451.csproj">
+    <ProjectReference Include="..\SDK\PayPal.Core.SDK.NETStandard20.csproj">
       <Project>{1bd91bcf-1ddf-4f1f-a510-c9f4001a50a8}</Project>
-      <Name>PayPal.Core.SDK.VS.2013</Name>
+      <Name>PayPal.Core.SDK.NETStandard20</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
