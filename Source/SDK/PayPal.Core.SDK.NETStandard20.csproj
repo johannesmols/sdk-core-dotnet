@@ -4,6 +4,10 @@
     <RootNamespace>PayPal</RootNamespace>
     <AssemblyName>PayPalCoreSDK</AssemblyName>
     <BaseIntermediateOutputPath>obj\net451</BaseIntermediateOutputPath>
+	<PackageId>PayPalCoreSDK_NetStandard</PackageId>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageProjectUrl>https://github.com/johannesmols/sdk-core-dotnet/</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/johannesmols/sdk-core-dotnet.git</RepositoryUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\bin\Debug\net451\</OutputPath>
@@ -29,5 +33,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="SOAP\MerchantAPICallPreHandlerTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+	  <None Include="..\..\README.md">
+		  <Pack>true</Pack>
+		  <PackagePath>\</PackagePath>
+	  </None>
   </ItemGroup>
 </Project>
