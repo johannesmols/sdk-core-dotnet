@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PayPal</RootNamespace>
+    <AssemblyName>PayPalCoreSDK</AssemblyName>
+    <BaseIntermediateOutputPath>obj\net451</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\net451\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET_4_5_1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release\net451\</OutputPath>
+    <DefineConstants>TRACE;NET_4_5_1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\paypal-open-source.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="SOAP\MerchantAPICallPreHandlerTest.cs" />
+  </ItemGroup>
+</Project>
